@@ -1,0 +1,8 @@
+source;share/808x-final-project/hook/cmake_prefix_path.ps1
+source;share/808x-final-project/hook/cmake_prefix_path.dsv
+source;share/808x-final-project/hook/cmake_prefix_path.sh
+source;share/808x-final-project/local_setup.bash
+source;share/808x-final-project/local_setup.dsv
+source;share/808x-final-project/local_setup.ps1
+source;share/808x-final-project/local_setup.sh
+source;share/808x-final-project/local_setup.zsh
