@@ -5,6 +5,8 @@
   <version>0.0.0</version>
   <description>Mobile Autonomous robot for book collection and organization in library environment setting</description>
   <maintainer email="hritvikchoudhari@gmail.com">hac</maintainer>
+  <maintainer email="ishanmk@umd.edu">ishanmk</maintainer>
+  <maintainer email="kshitij@umd.edu">kshitij</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

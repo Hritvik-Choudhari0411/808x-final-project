@@ -1,7 +1,7 @@
 /**
  * @file navigation.hpp
- * @author Hritvik Choudhari (hac@umd.edu)
  * @brief Declaration file for the Navigation class, responsible for generating the search path and moving the robot.
+ * @author Hritvik Choudhari (hac@umd.edu)
  * @version 0.1
  * @date 2023-12-09
  * 
@@ -9,9 +9,10 @@
  * 
  */
 #pragma once
+
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
-#include "./Perception.hpp"
+#include "perception.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 
@@ -19,14 +20,6 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
-
-using POSE = geometry_msgs::msg::PoseStamped;
-using PUBLISHER = rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr;
-using TIMER = rclcpp::TimerBase::SharedPtr;
-using ODOM = nav_msgs::msg::Odometry;
-using std::placeholders::_1;
-using std::chrono::duration;
-using namespace std::chrono_literals;
 
 /**
  * @brief Navigation class responsible for generating the search path and moving the robot.
@@ -66,30 +59,31 @@ class Navigation : public rclcpp::Node {
      * @return false If the search cannot be resumed.
      */
     bool resume_search();
+
     /**
      * @brief Callback for odom topic during the search.
      * 
      * @param msg Odometry message.
      */
-    void odom_callback_search(const ODOM::SharedPtr msg);
+    void odom_callback_search(const nav_msgs::msg::Odometry::SharedPtr msg);
 
     /**
      * @brief Callback for odom topic during book placement in shelf.
      * 
      * @param msg Odometry message.
      */
-    void odom_callback_place(const ODOM::SharedPtr msg);
+    void odom_callback_place(const nav_msgs::msg::Odometry::SharedPtr msg);
 
     /**
      * @brief Callback for odom topic during resuming the search.
      * 
      * @param msg Odometry message.
      */
-    void odom_callback_resume(const ODOM::SharedPtr msg);
+    void odom_callback_resume(const nav_msgs::msg::Odometry::SharedPtr msg);
 
  private:
-    PUBLISHER nav_pub_; ///< PoseStamped publisher for navigation.
-    TIMER timer_; ///< Timer for controlling periodic tasks.
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr nav_pub_; ///< PoseStamped publisher for navigation.
+    rclcpp::TimerBase::SharedPtr timer_; ///< Timer for controlling periodic tasks.
     std::shared_ptr<rclcpp::Node> nav_odom_node; ///< Node for handling odometry data during navigation.
     bool check_odom; ///< Flag for checking odometry status.
     float_t req_pos_y; ///< Required position along the y-axis.

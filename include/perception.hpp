@@ -1,7 +1,7 @@
 /**
  * @file perception.hpp
+ * @brief Declaration file for the Perception class, responsible for detecting books using image processing.
  * @author Hritvik Choudhari (hac@umd.edu)
- * @brief Perception class declaration file
  * @version 0.1
  * @date 2023-12-09
  * 
@@ -9,6 +9,7 @@
  * 
  */
 #pragma once
+
 #include "rclcpp/rclcpp.hpp"
 #include <opencv2/opencv.hpp>
 #include "opencv2/core/core.hpp"
@@ -20,22 +21,13 @@
 #include "cv_bridge/cv_bridge.h"
 #include "opencv2/highgui/highgui.hpp"
 #include "rclcpp/logging.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 
 #include <memory>
 #include <iostream>
 #include <vector>
 #include <chrono>
 #include <iomanip>
-
-#include "geometry_msgs/msg/twist.hpp"
-#include "geometry_msgs/msg/pose_stamped.hpp"
-#include "nav_msgs/msg/odometry.hpp"
-
-using TWIST = geometry_msgs::msg::Twist;
-using std::placeholders::_1;
-using std::chrono::duration;
-using namespace std::chrono_literals;
-using ODOM = nav_msgs::msg::Odometry;
 
 /**
  * @brief Perception class for detecting books using image processing.
@@ -73,7 +65,7 @@ class Perception : public rclcpp::Node {
      * 
      * @param msg Odometry message.
      */
-    void odom_callback_search(const ODOM::SharedPtr msg);
+    void odom_callback_search(const nav_msgs::msg::Odometry::SharedPtr msg);
 
     /**
      * @brief Callback function to read the image from the robot.
@@ -88,9 +80,9 @@ class Perception : public rclcpp::Node {
     rclcpp::NodeOptions node_opt; ///< Node options for Perception.
     image_transport::Subscriber sub; ///< Image subscriber.
     rclcpp::Node::SharedPtr img_node; ///< Image node for handling image data.
-    rclcpp::Publisher<TWIST>::SharedPtr vel_pub_; ///< Twist publisher for robot velocity.
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub_; ///< Twist publisher for robot velocity.
     rclcpp::Node::SharedPtr percep_odom_node; ///< Node for handling odometry data.
-    rclcpp::Subscription<ODOM>::SharedPtr odom_sub; ///< Odometry subscriber.
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub; ///< Odometry subscriber.
     bool rotate_R_flag; ///< Flag indicating right rotation.
     bool rotate_L_flag; ///< Flag indicating left rotation.
     bool move_forward; ///< Flag indicating forward movement.

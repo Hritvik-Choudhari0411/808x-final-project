@@ -1,7 +1,7 @@
 /**
  * @file manipulation.hpp
- * @author Hritvik Choudhari (hac@umd.edu)
  * @brief Declaration file for the Manipulation class, responsible for commanding the gripper to pick and place the book.
+ * @author Hritvik Choudhari (hac@umd.edu)
  * @version 0.1
  * @date 2023-12-09
  * 
@@ -9,6 +9,7 @@
  * 
  */
 #pragma once
+
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "gazebo_msgs/srv/spawn_entity.hpp"
@@ -17,19 +18,6 @@
 
 #include <fstream>
 #include <iostream>
-
-using REQUEST_SPAWN = gazebo_msgs::srv::SpawnEntity::Request;
-using SERVICE_SPAWN = gazebo_msgs::srv::SpawnEntity;
-using CLIENT_SPAWN = rclcpp::Client<gazebo_msgs::srv::SpawnEntity>::SharedPtr;
-using RESPONSE_SPAWN = rclcpp::Client<SERVICE_DELETE>::SharedFuture;
-
-using REQUEST_DELETE = gazebo_msgs::srv::DeleteEntity::Request;
-using SERVICE_DELETE = gazebo_msgs::srv::DeleteEntity;
-using CLIENT_DELETE = rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr;
-using RESPONSE_DELETE = rclcpp::Client<SERVICE_DELETE>::SharedFuture;
-
-using namespace std::chrono_literals;
-using std::placeholders::_1;
 
 /**
  * @brief Manipulation class responsible for commanding the gripper to pick and place the book.
@@ -65,7 +53,7 @@ class Manipulation : public rclcpp::Node {
 
  private:
     geometry_msgs::msg::Pose place_pose; ///< Pose for placing the book.
-    CLIENT_DELETE pick_client; ///< Service client for deleting the book after picking.
-    CLIENT_SPAWN place_client; ///< Service client for spawning the book for placement.
+    rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr pick_client; ///< Service client for deleting the book after picking.
+    rclcpp::Client<gazebo_msgs::srv::SpawnEntity>::SharedPtr place_client; ///< Service client for spawning the book for placement.
     rclcpp::Node::SharedPtr manpltn_node; ///< Node for handling manipulation-related functionalities.
 };
