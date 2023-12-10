@@ -1,0 +1,20 @@
+[0.042s] Invoking command in '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hac/ros2_ws/install/turtlebot3_teleop:/opt/ros/humble /usr/bin/cmake --build /home/hac/ros2_ws/src/808x-final-project/build/808x-final-project -- -j16 -l16
+[0.072s] Invoked command in '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hac/ros2_ws/install/turtlebot3_teleop:/opt/ros/humble /usr/bin/cmake --build /home/hac/ros2_ws/src/808x-final-project/build/808x-final-project -- -j16 -l16
+[0.131s] Invoking command in '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hac/ros2_ws/install/turtlebot3_teleop:/opt/ros/humble /usr/bin/cmake --install /home/hac/ros2_ws/src/808x-final-project/build/808x-final-project
+[0.144s] -- Install configuration: ""
+[0.145s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/ament_index/resource_index/package_run_dependencies/808x-final-project
+[0.145s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/ament_index/resource_index/parent_prefix_path/808x-final-project
+[0.145s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/environment/ament_prefix_path.sh
+[0.145s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/environment/ament_prefix_path.dsv
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/environment/path.sh
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/environment/path.dsv
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/local_setup.bash
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/local_setup.sh
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/local_setup.zsh
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/local_setup.dsv
+[0.146s] -- Installing: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/package.dsv
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/ament_index/resource_index/packages/808x-final-project
+[0.146s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/cmake/808x-final-projectConfig.cmake
+[0.147s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/cmake/808x-final-projectConfig-version.cmake
+[0.147s] -- Up-to-date: /home/hac/ros2_ws/src/808x-final-project/install/808x-final-project/share/808x-final-project/package.xml
+[0.148s] Invoked command in '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hac/ros2_ws/install/turtlebot3_teleop:/opt/ros/humble /usr/bin/cmake --install /home/hac/ros2_ws/src/808x-final-project/build/808x-final-project
