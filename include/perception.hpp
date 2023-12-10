@@ -3,7 +3,7 @@
  * @author Hritvik Choudhari (hac@umd.edu)
  * @brief Perception class declaration file
  * @version 0.1
- * @date 2022-12-02
+ * @date 2023-12-09
  * 
  * @copyright Copyright (c) 2022
  * 
@@ -38,9 +38,9 @@ using namespace std::chrono_literals;
 using ODOM = nav_msgs::msg::Odometry;
 
 /**
- * @brief Perception class for detecting disposal bins using image processing.
+ * @brief Perception class for detecting books using image processing.
  * 
- * This class is responsible for detecting disposal bins, moving the robot towards the bin
+ * This class is responsible for detecting books, moving the robot towards the book
  * using camera and LiDAR data, and managing various flags for control logic.
  */
 class Perception : public rclcpp::Node {
@@ -53,27 +53,27 @@ class Perception : public rclcpp::Node {
     Perception();
 
     /**
-     * @brief Detects the disposal bin using image processing.
+     * @brief Detects the book using image processing.
      * 
-     * @return true If the bin is detected.
-     * @return false If the bin is not detected.
+     * @return true If the book is detected.
+     * @return false If the book is not detected.
      */
-    bool detect_shelf();
+    bool detect_book();
 
     /**
-     * @brief Moves the robot towards the bin using camera and LiDAR data.
+     * @brief Moves the robot towards the book using camera and LiDAR data.
      * 
-     * @return true If the robot reaches the bin.
-     * @return false If the robot doesn't reach the bin.
+     * @return true If the robot reaches the book.
+     * @return false If the robot doesn't reach the book.
      */
-    bool go_to_shelf();
+    bool go_to_book();
 
     /**
-     * @brief Callback function to subscribe to the odometry topic.
+     * @brief Callback function to subscribe to the odometry topic while searching.
      * 
      * @param msg Odometry message.
      */
-    void odom_callback(const ODOM::SharedPtr msg);
+    void odom_callback_search(const ODOM::SharedPtr msg);
 
     /**
      * @brief Callback function to read the image from the robot.
@@ -88,7 +88,7 @@ class Perception : public rclcpp::Node {
     rclcpp::NodeOptions node_opt; ///< Node options for Perception.
     image_transport::Subscriber sub; ///< Image subscriber.
     rclcpp::Node::SharedPtr img_node; ///< Image node for handling image data.
-    rclcpp::Publisher<TWIST>::SharedPtr vel_pub; ///< Twist publisher for robot velocity.
+    rclcpp::Publisher<TWIST>::SharedPtr vel_pub_; ///< Twist publisher for robot velocity.
     rclcpp::Node::SharedPtr percep_odom_node; ///< Node for handling odometry data.
     rclcpp::Subscription<ODOM>::SharedPtr odom_sub; ///< Odometry subscriber.
     bool rotate_R_flag; ///< Flag indicating right rotation.
