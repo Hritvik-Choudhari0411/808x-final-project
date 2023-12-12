@@ -82,6 +82,8 @@ class Navigation : public rclcpp::Node {
     void odom_callback_resume(const nav_msgs::msg::Odometry::SharedPtr msg);
 
  private:
+    geometry_msgs::msg::Pose current_pose; // Current pose of the robot
+    geometry_msgs::msg::Pose next_pose; // Next target pose for the robot
     rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr nav_pub_; ///< PoseStamped publisher for navigation.
     rclcpp::TimerBase::SharedPtr timer_; ///< Timer for controlling periodic tasks.
     std::shared_ptr<rclcpp::Node> nav_odom_node; ///< Node for handling odometry data during navigation.
