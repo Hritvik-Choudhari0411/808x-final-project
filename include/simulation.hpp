@@ -26,7 +26,7 @@ class Simulation {
     */
     Simulation();
 
-    Navigation m_nav;
-    Perception m_perc;
-    Manipulation m_manip;
+    Navigation navigation;
+    Perception perception;
+    Manipulation manipulation;
 };
