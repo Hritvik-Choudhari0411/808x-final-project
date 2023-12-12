@@ -1,0 +1,7 @@
+<map id="Simulation" name="Simulation">
+<area shape="rect" id="node1" title="Simulation class to simulate the book collection and arranging task of the robot." alt="" coords="127,171,219,197"/>
+<area shape="rect" id="node2" href="$class_perception.html" title="Perception class for detecting books using image processing." alt="" coords="5,81,96,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="122,5,225,32"/>
+<area shape="rect" id="node4" href="$class_manipulation.html" title="Manipulation class responsible for commanding the gripper to pick and place the book." alt="" coords="120,81,227,108"/>
+<area shape="rect" id="node5" href="$class_navigation.html" title="Navigation class responsible for generating the search path and moving the robot." alt="" coords="251,81,344,108"/>
+</map>

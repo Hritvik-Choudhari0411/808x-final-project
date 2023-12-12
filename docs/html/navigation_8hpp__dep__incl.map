@@ -1,0 +1,8 @@
+<map id="include/navigation.hpp" name="include/navigation.hpp">
+<area shape="rect" id="node1" title="Declaration file for the Navigation class, responsible for generating the search path and moving the ..." alt="" coords="156,5,327,32"/>
+<area shape="rect" id="node2" href="$navigation_8cpp.html" title="Navigation class implementation (code stubs)" alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$perception_8cpp.html" title="Perception class implementation (code stub)" alt="" coords="171,80,312,107"/>
+<area shape="rect" id="node4" href="$simulation_8hpp.html" title="RobotSim class interface." alt="" coords="336,80,507,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main file for simulation and demo." alt="" coords="295,155,401,181"/>
+<area shape="rect" id="node6" href="$simulation_8cpp.html" title="RobotSim class implementation (code stub)" alt="" coords="424,155,565,181"/>
+</map>

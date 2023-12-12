@@ -1,0 +1,7 @@
+<map id="include/manipulation.hpp" name="include/manipulation.hpp">
+<area shape="rect" id="node1" title="Declaration file for the Manipulation class, responsible for commanding the gripper to pick and place..." alt="" coords="86,5,273,32"/>
+<area shape="rect" id="node2" href="$manipulation_8cpp.html" title="Manipulation class implementation (code stubs)" alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node3" href="$simulation_8hpp.html" title="RobotSim class interface." alt="" coords="189,80,359,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file for simulation and demo." alt="" coords="148,155,253,181"/>
+<area shape="rect" id="node5" href="$simulation_8cpp.html" title="RobotSim class implementation (code stub)" alt="" coords="277,155,418,181"/>
+</map>
