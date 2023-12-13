@@ -22,6 +22,7 @@ on:
   # Triggered whenever a pull request is created on main
   pull_request:
     branches: [ "main" , "devel_phase1"]
+
     types: [opened]
 
   # Allow manual trigger
@@ -93,6 +94,7 @@ jobs:
           colcon build --packages-select 808x-final-project --cmake-args -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug
           colcon build --packages-select 808x-final-project --cmake-clean-first --cmake-target test_coverage
 
+
       # Upload coverage result to CodeCov
       - name: Upload coverage result to CodeCov
         uses: codecov/codecov-action@v3
@@ -101,4 +103,3 @@ jobs:
           files: ${{github.workspace}}/build/test_coverage.info
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)      
-          
