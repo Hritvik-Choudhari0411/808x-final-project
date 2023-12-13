@@ -38,9 +38,9 @@ if(BUILD_TESTING)
   set(ament_cmake_lint_cmake_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 
-  set(
+  set(TESTFILES
     test/main.cpp
-    test/test.cpp
+    test/test_manipulation.cpp
   )
 
   ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
@@ -95,9 +95,6 @@ endif()
 # ref: https://iamsorush.com/posts/cpp-cmake-essential/
 # ref: https://cmake.org/cmake/help/latest/guide/tutorial/index.html
 #
-add_subdirectory(src)
-add_subdirectory(test)
-add_subdirectory(include)
 
 # create targets for building code coverage reports
 if(WANT_COVERAGE)

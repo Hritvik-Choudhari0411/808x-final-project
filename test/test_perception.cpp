@@ -22,11 +22,11 @@ class TaskPerception : public testing::Test {
   rclcpp::Node::SharedPtr node_;
 };
 
-TEST_F(TaskTalker, test_num_publishers) {
+TEST_F(TaskPerception, test_num_publishers) {
   node_ = rclcpp::Node::make_shared("test_perception");
   auto test_pub = node_->create_publisher<std_msgs::msg::String>
                     ("perception", 10.0);
 
   auto num_pub = node_->count_publishers("perception");
-  EXPECT_EQ(0, static_cast<int>(num_pub));
+  EXPECT_EQ(1, static_cast<int>(num_pub));
 }
