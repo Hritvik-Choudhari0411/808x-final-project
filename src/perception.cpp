@@ -2,6 +2,7 @@
  * @file Perception.cpp
  * @brief Perception class implementation (code stub)
  * @author Hritvik Choudhari (hac@umd.edu)
+ * @author Kshitij Karnawat (@KshitijKarnawat)
  * @version 0.1
  * @date 2023-12-10
  * 
@@ -33,7 +34,8 @@ Perception::Perception() : Node("perception") {
  * 
  * @param msg Image message.
  */
-void Perception::img_sensor_callback(const sensor_msgs::msg::Image::ConstSharedPtr&) {
+void Perception::img_sensor_callback(
+    const sensor_msgs::msg::Image::ConstSharedPtr&) {
 }
 
 /**
@@ -41,7 +43,8 @@ void Perception::img_sensor_callback(const sensor_msgs::msg::Image::ConstSharedP
  * 
  * @param msg Odometry message.
  */
-void Perception::odom_callback_search(const nav_msgs::msg::Odometry::SharedPtr) {
+void Perception::odom_callback_search(
+    const nav_msgs::msg::Odometry::SharedPtr) {
 }
 
 /**
@@ -51,7 +54,7 @@ void Perception::odom_callback_search(const nav_msgs::msg::Odometry::SharedPtr) 
  * @return false If the book detection fails.
  */
 bool Perception::detect_book() {
-    return true; // or false based on the actual logic
+    return true;  // or false based on the actual logic
 }
 
 /**
@@ -61,5 +64,5 @@ bool Perception::detect_book() {
  * @return false If the robot movement fails.
  */
 bool Perception::go_to_book() {
-    return true; // or false based on the actual logic
+    return true;  // or false based on the actual logic
 }

@@ -52,9 +52,15 @@ class Manipulation : public rclcpp::Node {
 
 
  private:
-    geometry_msgs::msg::Pose pick_pose; ///< Pose for picking the book.
-    geometry_msgs::msg::Pose place_pose; ///< Pose for placing the book.
-    rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr pick_client; ///< Service client for deleting the book after picking.
-    rclcpp::Client<gazebo_msgs::srv::SpawnEntity>::SharedPtr place_client; ///< Service client for spawning the book for placement.
-    rclcpp::Node::SharedPtr manpltn_node; ///< Node for handling manipulation-related functionalities.
+    geometry_msgs::msg::Pose pick_pose;   // Pose for picking the book.
+    geometry_msgs::msg::Pose place_pose;  // Pose for placing the book.
+
+    // Service client for deleting the book after picking.
+    rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr pick_client;
+
+    // Service client for spawning the book for placement.
+    rclcpp::Client<gazebo_msgs::srv::SpawnEntity>::SharedPtr place_client;
+
+     // Node for handling manipulation-related functionalities.
+    rclcpp::Node::SharedPtr manpltn_node;
 };

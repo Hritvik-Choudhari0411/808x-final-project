@@ -2,6 +2,7 @@
  * @file perception.hpp
  * @brief Declaration file for the Perception class, responsible for detecting books using image processing.
  * @author Hritvik Choudhari (hac@umd.edu)
+ * @author Kshitij Karnawat (@KshitijKarnawat)
  * @version 0.1
  * @date 2023-12-09
  * 
@@ -72,22 +73,31 @@ class Perception : public rclcpp::Node {
      * 
      * @param msg Image message.
      */
-    void img_sensor_callback(const sensor_msgs::msg::Image::ConstSharedPtr& msg);
+    void img_sensor_callback(
+      const sensor_msgs::msg::Image::ConstSharedPtr& msg);
 
  private:
-    cv::Mat img_data; ///< Image data obtained from the robot.
-    sensor_msgs::msg::LaserScan lidar_data; ///< LiDAR data obtained from the robot.
-    rclcpp::NodeOptions node_opt; ///< Node options for Perception.
-    image_transport::Subscriber sub; ///< Image subscriber.
-    rclcpp::Node::SharedPtr img_node; ///< Image node for handling image data.
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub_; ///< Twist publisher for robot velocity.
-    rclcpp::Node::SharedPtr percep_odom_node; ///< Node for handling odometry data.
-    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub; ///< Odometry subscriber.
-    bool rotate_R_flag; ///< Flag indicating right rotation.
-    bool rotate_L_flag; ///< Flag indicating left rotation.
-    bool move_forward; ///< Flag indicating forward movement.
-    bool stop_flag; ///< Flag indicating stop condition.
-    bool next_location; ///< Flag indicating the next location.
-    double current_yaw; ///< Current yaw angle of the robot.
-    double init_yaw; ///< Initial yaw angle of the robot.
+    cv::Mat img_data;  // Image data obtained from the robot.
+
+    // LiDAR data obtained from the robot.
+    sensor_msgs::msg::LaserScan lidar_data;
+    rclcpp::NodeOptions node_opt;  // Node options for Perception.
+    image_transport::Subscriber sub;  // Image subscriber.
+    rclcpp::Node::SharedPtr img_node;  // Image node for handling image data.
+
+    // Twist publisher for robot velocity.
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub_;
+
+    // Node for handling odometry data.
+    rclcpp::Node::SharedPtr percep_odom_node;
+
+    // Odometry subscriber.
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
+    bool rotate_R_flag;  // Flag indicating right rotation.
+    bool rotate_L_flag;  // Flag indicating left rotation.
+    bool move_forward;  // Flag indicating forward movement.
+    bool stop_flag;  // Flag indicating stop condition.
+    bool next_location;  // Flag indicating the next location.
+    double current_yaw;  // Current yaw angle of the robot.
+    double init_yaw;  // Initial yaw angle of the robot.
 };

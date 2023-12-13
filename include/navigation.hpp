@@ -2,6 +2,7 @@
  * @file navigation.hpp
  * @brief Declaration file for the Navigation class, responsible for generating the search path and moving the robot.
  * @author Hritvik Choudhari (hac@umd.edu)
+ * @author Kshitij Karnawat (@KshitijKarnawat)
  * @version 0.1
  * @date 2023-12-09
  * 
@@ -10,11 +11,11 @@
  */
 #pragma once
 
-#include "rclcpp/rclcpp.hpp"
-#include "geometry_msgs/msg/pose.hpp"
-#include "perception.hpp"
-#include "geometry_msgs/msg/pose_stamped.hpp"
-#include "nav_msgs/msg/odometry.hpp"
+#include <rclcpp/rclcpp.hpp>
+#include <geometry_msgs/msg/pose.hpp>
+#include "./perception.hpp"
+#include <geometry_msgs/msg/pose_stamped.hpp>
+#include <nav_msgs/msg/odometry.hpp>
 
 #include <memory>
 #include <iostream>
@@ -82,11 +83,24 @@ class Navigation : public rclcpp::Node {
     void odom_callback_resume(const nav_msgs::msg::Odometry::SharedPtr msg);
 
  private:
-    geometry_msgs::msg::Pose current_pose; // Current pose of the robot
-    geometry_msgs::msg::Pose next_pose; // Next target pose for the robot
-    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr nav_pub_; ///< PoseStamped publisher for navigation.
-    rclcpp::TimerBase::SharedPtr timer_; ///< Timer for controlling periodic tasks.
-    std::shared_ptr<rclcpp::Node> nav_odom_node; ///< Node for handling odometry data during navigation.
-    bool check_odom; ///< Flag for checking odometry status.
-    float_t req_pos_y; ///< Required position along the y-axis.
+    // Current pose of the robot
+    geometry_msgs::msg::Pose current_pose;
+
+    // Next target pose for the robot
+    geometry_msgs::msg::Pose next_pose;
+
+    // PoseStamped publisher for navigation.
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr nav_pub_;
+
+    // Timer for controlling periodic tasks.
+    rclcpp::TimerBase::SharedPtr timer_;
+
+    // Node for handling odometry data during navigation.
+    std::shared_ptr<rclcpp::Node> nav_odom_node;
+
+    // Flag for checking odometry status.
+    bool check_odom;
+
+    // Required position along the y-axis.
+    float_t req_pos_y;
 };
