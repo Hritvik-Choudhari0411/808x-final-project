@@ -42,7 +42,40 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y software-properties-common
-                    
+
+      # Install OpenCV
+      - name: Install opencv 
+        run: |   
+            sudo apt-get install libopencv-dev 
+            sudo apt-get install libopencv-contrib-dev
+
+      # Install ROS Humble
+      - name: Install ROS Humble
+        run: |
+          sudo apt update
+          sudo apt install -y ros-humble-desktop python3-argcomplete
+          sudo apt install -y ros-dev-tools
+          source /opt/ros/humble/setup.bash
+      
+      # Install CV Bridge
+      - name: CV Bridge
+        run: |
+          sudo apt-get install -y ros-humble-cv-bridge
+          sudo apt-get install -y ros-humble-vision-opencv
+          source /opt/ros/humble/setup.bash
+      
+      - name: ROS Dep
+        run: |
+          sudo rosdep init
+          rosdep update
+          rosdep install --from-paths src -i -y --rosdistro humble
+      
+      # Install Gazebo and other ROS dependencies
+      - name: CMake Dependencies for the package
+        run: |
+          sudo apt install -y ros-humble-gazebo-ros-pkgs
+          sudo apt-get install -y ros-humble-rviz2 ros-humble-turtle-tf2-py ros-humble-tf2-ros ros-humble-tf2-tools ros-humble-turtlesim          
+
       # Build, run unit test, and generate coverage report
       - name: Configure CMake flags and build exectables
         run: |
