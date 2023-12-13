@@ -53,6 +53,8 @@ jobs:
       - name: Install ROS Humble
         run: |
           sudo apt update
+          sudo apt upgrade -y
+          sudo apt update
           sudo apt install -y ros-humble-desktop python3-argcomplete
           sudo apt install -y ros-dev-tools
           source /opt/ros/humble/setup.bash
