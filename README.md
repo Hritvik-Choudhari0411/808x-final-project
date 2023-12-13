@@ -1,5 +1,9 @@
 # 808x-final-project
 
+![CICD Workflow status](https://github.com/KshitijKarnawat/808x-final-project/actions/workflows/main.yml/badge.svg)
+[![codecov](https://codecov.io/gh/KshitijKarnawat/808x-final-project/branch/devel_phase1/graph/badge.svg)](https://codecov.io/gh/KshitijKarnawat/808x-midterm-project)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Problem Statement
 
 Acme Robotics, Inc. is introducing an innovative mobile robot system for libraries, designed to address organizational challenges by autonomously collecting and organizing misplaced books. The company proposes a refined software development process, combining Agile Iterative Processes and pair-programming techniques over a three-week timeline. The robotic assistant navigates library spaces with precision, identifies and collects books from tables, and organizes them in designated shelves, enhancing efficiency. Acme envisions versatile applications beyond libraries, including retail inventory management, event cleanup, and home organization solutions, aiming to bring automation to diverse domains for increased efficiency and convenience.
