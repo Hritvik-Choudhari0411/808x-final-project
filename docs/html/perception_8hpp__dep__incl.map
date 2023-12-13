@@ -1,0 +1,9 @@
+<map id="include/perception.hpp" name="include/perception.hpp">
+<area shape="rect" id="node1" title="Declaration file for the Perception class, responsible for detecting books using image processing." alt="" coords="156,5,327,32"/>
+<area shape="rect" id="node2" href="$perception_8cpp.html" title="Perception class implementation (code stub)" alt="" coords="5,155,147,181"/>
+<area shape="rect" id="node3" href="$navigation_8hpp.html" title="Declaration file for the Navigation class, responsible for generating the search path and moving the ..." alt="" coords="156,80,327,107"/>
+<area shape="rect" id="node5" href="$simulation_8hpp.html" title="RobotSim class interface." alt="" coords="336,155,507,181"/>
+<area shape="rect" id="node4" href="$navigation_8cpp.html" title="Navigation class implementation (code stubs)" alt="" coords="171,155,312,181"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Main file for simulation and demo." alt="" coords="295,229,401,256"/>
+<area shape="rect" id="node7" href="$simulation_8cpp.html" title="RobotSim class implementation (code stub)" alt="" coords="424,229,565,256"/>
+</map>

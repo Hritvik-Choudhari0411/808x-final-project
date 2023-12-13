@@ -17,11 +17,12 @@ name: Run Unit Test and Upload Coverage Report
 on:
   # Triggered whenever push to main 
   push:
-    branches: [ "main" ]
+    branches: [ "main" , "devel_phase1"]
 
   # Triggered whenever a pull request is created on main
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" , "devel_phase1"]
+
     types: [opened]
 
   # Allow manual trigger
@@ -40,15 +41,59 @@ jobs:
       # Install some system pacakges
       - name: Install build packages
         run: |
-          sudo apt update
-          sudo apt install -y software-properties-common
+          sudo apt-get update
           sudo apt install -y doxygen lcov gcovr
-          
+          sudo apt-get install -y software-properties-common
+
+      # Install OpenCV
+      - name: Install opencv 
+        run: |   
+            sudo apt-get install libopencv-dev 
+            sudo apt-get install libopencv-contrib-dev
+
+      # Install ROS Humble
+      - name: Install ROS Humble
+        run: |
+          sudo apt-get update && sudo apt-get install locales
+          sudo locale-gen en_US en_US.UTF-8
+          sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+          export LANG=en_US.UTF-8
+          sudo apt-get install software-properties-common
+          sudo add-apt-repository universe
+          sudo apt-get update && sudo apt-get install curl -y
+          sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+          sudo apt-get update
+          sudo apt-get upgrade
+          sudo apt-get install ros-humble-desktop -y
+          sudo apt-get install ros-dev-tools -y
+          source /opt/ros/humble/setup.bash
+      
+      # Install CV Bridge
+      - name: CV Bridge
+        run: |
+          sudo apt-get install -y ros-humble-cv-bridge
+          sudo apt-get install -y ros-humble-vision-opencv
+          source /opt/ros/humble/setup.bash
+      
+      - name: ROS Dep
+        run: |
+          sudo rosdep init
+          rosdep update
+          rosdep install --from-paths src -i -y --rosdistro humble
+      
+      # Install Gazebo and other ROS dependencies
+      - name: CMake Dependencies for the package
+        run: |
+          sudo apt-get install -y ros-humble-gazebo-ros-pkgs
+          sudo apt-get install -y ros-humble-rviz2 ros-humble-turtle-tf2-py ros-humble-tf2-ros ros-humble-tf2-tools ros-humble-turtlesim          
+
       # Build, run unit test, and generate coverage report
       - name: Configure CMake flags and build exectables
         run: |
-          cmake -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -S ./ -B build/
-          cmake --build build/ --clean-first --target all test_coverage
+          colcon build --packages-select 808x-final-project --cmake-args -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug
+          colcon build --packages-select 808x-final-project --cmake-clean-first --cmake-target test_coverage
+
 
       # Upload coverage result to CodeCov
       - name: Upload coverage result to CodeCov
@@ -58,4 +103,3 @@ jobs:
           files: ${{github.workspace}}/build/test_coverage.info
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)      
-          
