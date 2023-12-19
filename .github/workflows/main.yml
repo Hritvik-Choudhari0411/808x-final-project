@@ -34,7 +34,7 @@ name: Run Unit Test and Upload Coverage Report
 on:
   # Triggered whenever push to main 
   push:
-    branches: [ "main" , "devel-phase2"]
+    branches: [ "main" , "devel-phase2-codecov" ]
 
   # Triggered whenever a pull request is created on main
   pull_request:
@@ -63,6 +63,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y doxygen lcov gcovr pandoc
+
+      - name: Install ros packages
+        run: |
+            sudo apt update
+            sudo apt install -y ros-humble-gazebo-ros
           
       # Run all unit test, integration test, and generate combined coverage report
       - name: Build, run unit test, and generate coverage report
@@ -70,14 +75,18 @@ jobs:
           sudo chmod +x ./scripts/do-tests.bash
           sudo chmod +x ./scripts/do-docs.bash
           ./scripts/do-tests.bash
-          ./scripts/do-docs.bash
 
       # Upload coverage result to CodeCov
-      - name: Upload coverage result to CodeCov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: ${{github.workspace}}/build/test_coverage_merged.info
-          fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false)      
+      # - name: Upload coverage result to CodeCov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      #     files: ${{github.workspace}}/build/test_coverage_merged.info
+      #     fail_ci_if_error: true # optional (default = false)
+      #     verbose: true # optional (default = false)      
           
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        
