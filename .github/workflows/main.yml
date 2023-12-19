@@ -67,8 +67,8 @@ jobs:
       # Run all unit test, integration test, and generate combined coverage report
       - name: Build, run unit test, and generate coverage report
         run: |
-          ./do-tests.bash
-          ./do-docs.bash
+          ./scripts/do-tests.bash
+          ./scripts/do-docs.bash
 
       # Upload coverage result to CodeCov
       - name: Upload coverage result to CodeCov
