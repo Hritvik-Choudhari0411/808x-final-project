@@ -22,7 +22,7 @@ def generate_launch_description():
                          'models')
 
     map = os.path.join(get_package_share_directory('808x-final-project'),
-                         'maps', 'hospitalmap.yaml')
+                         'worlds', 'map.yaml')
     print(map)
     launch_file_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
@@ -33,8 +33,8 @@ def generate_launch_description():
                 tb3_man_bgp + '/launch/gazebo.launch.py']),
                 launch_arguments={'world': world, 'x_pose': '0.0', 'y_pose': '0.0'}.items())
 
-    bins_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
-                launch_file_dir, '/bins.launch.py']))
+    # bins_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
+    #             launch_file_dir, '/bins.launch.py']))
 
     nav_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
                 nav2_man + '/launch/navigation2.launch.py']),
@@ -49,7 +49,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         included_launch,
-        bins_launch,
+        # bins_launch,
         nav_launch,
         initial_pose_pub,
     ])

@@ -26,6 +26,49 @@ find_package(gazebo_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+
+############################################### LIBRARY #########################################################
+add_executable(libratech src/main.cpp src/manipulation.cpp src/navigation.cpp src/perception.cpp src/simulation.cpp)
+ament_target_dependencies(libratech
+  rclcpp
+  std_msgs
+  geometry_msgs
+  sensor_msgs
+  image_transport
+  cv_bridge
+  OpenCV
+  nav_msgs
+  gazebo_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs 
+  tf2_sensor_msgs  
+)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+install(TARGETS
+  libratech
+  DESTINATION lib/${PROJECT_NAME})
+
+############################################### LAUNCH #########################################################
+
+install(DIRECTORY 
+  launch
+  worlds
+  models
+  DESTINATION share/${PROJECT_NAME}
+)
+
+############################################### SCRIPTS #########################################################
+## Install some arbitrary executables
+install(PROGRAMS      # want to make the file executable (ie. chmod a+x)
+  scripts/generate_coverage_report.bash
+  DESTINATION lib/${PROJECT_NAME})
+
+
+############################################### TESTING #########################################################
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -53,26 +96,7 @@ if(BUILD_TESTING)
 
 endif()
 
-add_executable(libratech src/main.cpp src/manipulation.cpp src/navigation.cpp src/perception.cpp src/simulation.cpp)
-ament_target_dependencies(libratech
-  rclcpp
-  std_msgs
-  geometry_msgs
-  sensor_msgs
-  image_transport
-  cv_bridge
-  OpenCV
-  nav_msgs
-  gazebo_msgs
-  tf2
-  tf2_ros
-  tf2_geometry_msgs 
-  tf2_sensor_msgs  
-)
-include_directories(
-    ${CMAKE_SOURCE_DIR}/include
-)
-
+############################################### CODE COVERAGE #########################################################
 option(WANT_COVERAGE "this option enable coverage" ON)
 if(NOT CMAKE_BUILD_TYPE MATCHES "Debug")
   set(WANT_COVERAGE OFF)
