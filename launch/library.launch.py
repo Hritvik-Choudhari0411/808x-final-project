@@ -11,7 +11,7 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'launch')
     tbot3_launch_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
-    # trash_launch_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
+    book_launch_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -51,9 +51,9 @@ def generate_launch_description():
             'yaw':    yaw
         }.items()
     )
-    # trash_ld = IncludeLaunchDescription(PythonLaunchDescriptionSource([
-    #           trash_launch_dir,
-    #           '/spawn_trash.launch.py']))
+    book_ld = IncludeLaunchDescription(PythonLaunchDescriptionSource([
+              book_launch_dir,
+              '/book.launch.py']))
 
     ld = LaunchDescription()
 
@@ -62,6 +62,6 @@ def generate_launch_description():
     ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(spawn_turtlebot_cmd)
-    # ld.add_action(trash_ld)
+    ld.add_action(book_ld)
 
     return ld
