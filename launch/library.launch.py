@@ -1,56 +1,67 @@
+
 import os
 
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.conditions import IfCondition, UnlessCondition
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command, LaunchConfiguration, PythonExpression
-from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
-from launch.actions import ExecuteProcess, SetEnvironmentVariable
-from launch.substitutions import EnvironmentVariable
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
 
 def generate_launch_description():
-    
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-
-    world = os.path.join(get_package_share_directory('808x-final-project'),
-                         'worlds', 'library.world')
-    
-    model = os.path.join(get_package_share_directory('808x-final-project'),
-                         'models')
-
-    map = os.path.join(get_package_share_directory('808x-final-project'),
-                         'worlds', 'map.yaml')
-    print(map)
-    launch_file_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
+    launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'launch')
+    tbot3_launch_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
+    # trash_launch_dir = os.path.join(get_package_share_directory('808x-final-project'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-    tb3_man_bgp = get_package_share_directory('turtlebot3_manipulation_bringup')
-    nav2_man = get_package_share_directory('turtlebot3_manipulation_navigation2')
 
-    included_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
-                tb3_man_bgp + '/launch/gazebo.launch.py']),
-                launch_arguments={'world': world, 'x_pose': '0.0', 'y_pose': '0.0'}.items())
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    x_pose = LaunchConfiguration('x_pose', default='3.0')
+    y_pose = LaunchConfiguration('y_pose', default='-4.0')
+    yaw = LaunchConfiguration('yaw', default='-3.14159')
 
-    # bins_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
-    #             launch_file_dir, '/bins.launch.py']))
+    library_world = os.path.join(get_package_share_directory('808x-final-project'),
+                                              'worlds', 'library.world')
 
-    nav_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
-                nav2_man + '/launch/navigation2.launch.py']),
-                launch_arguments={'map_yaml_file': map, 'start_rviz': 'True', 'params_file': nav2_man+'/param/turtlebot3_use_sim_time.yaml'}.items())
+    gzserver_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')
+        ),
+        launch_arguments={'world': library_world}.items()
+    )
 
-    initial_pose_pub = ExecuteProcess(
-        cmd=[
-            'ros2', 'topic pub -1', '/initialpose', 'geometry_msgs/PoseWithCovarianceStamped', '"{ header: {stamp: {sec: 0, nanosec: 0}, frame_id: "map"}, pose: { pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, } }"' 
-        ],
-        shell=True
+    gzclient_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
         )
+    )
 
-    return LaunchDescription([
-        included_launch,
-        # bins_launch,
-        nav_launch,
-        initial_pose_pub,
-    ])
-        
+    robot_state_publisher_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(launch_file_dir, 'robot_state_publisher.launch.py')
+        ),
+        launch_arguments={'use_sim_time': use_sim_time}.items()
+    )
+
+    spawn_turtlebot_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(tbot3_launch_dir, 'spwan_tb3.launch.py')),
+        launch_arguments={
+            'x_pose': x_pose,
+            'y_pose': y_pose,
+            'yaw':    yaw
+        }.items()
+    )
+    # trash_ld = IncludeLaunchDescription(PythonLaunchDescriptionSource([
+    #           trash_launch_dir,
+    #           '/spawn_trash.launch.py']))
+
+    ld = LaunchDescription()
+
+    # Add the commands to the launch description
+    ld.add_action(gzserver_cmd)
+    ld.add_action(gzclient_cmd)
+    ld.add_action(robot_state_publisher_cmd)
+    ld.add_action(spawn_turtlebot_cmd)
+    # ld.add_action(trash_ld)
+
+    return ld
