@@ -27,11 +27,11 @@
  */
 Perception::Perception() : Node("perception") {
     // Initialization of publishers, subscribers, and other parameters.
-    img_node = rclcpp::Node::make_shared("image_listener", options);
-    m_pub_vel = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+    img_node = rclcpp::Node::make_shared("image_listener", node_opt);
+    vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
     percep_odom_node = rclcpp::Node::make_shared("perception_odom_node");
     odom_sub = percep_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
-        std::bind(&Perception::odom_callback_search, this, _1));
+        std::bind(&Perception::odom_callback, this, _1));
 }
 
 /**
@@ -79,11 +79,11 @@ void Perception::img_sensor_callback(
             int area = static_cast<int>(rect.area());
             // Decide if the robot needs to rotate left/right/stop/move_forward
             if (cent_x < 180) {
-                l_rotate_flag = true;
-                r_rotate_flag = false;
+                rotate_L_flag = true;
+                rotate_R_flag = false;
             } else if (cent_x > 200) {
-                    r_rotate_flag = true;
-                    l_rotate_flag = false;
+                    rotate_R_flag = true;
+                    rotate_L_flag = false;
             } else {
                 if (area > 50000) {
                     stop_flag = true;
@@ -92,20 +92,20 @@ void Perception::img_sensor_callback(
                     move_forward = true;
                     stop_flag = false;
                 }
-                l_rotate_flag = false;
-                r_rotate_flag = false;
+                rotate_L_flag = false;
+                rotate_R_flag = false;
             }
             // Check the yaw to decide if the robot is rotated to detect bins
         } else {
-            if (present_yaw - initial_yaw > 1.57) {
+            if (current_yaw - init_yaw > 1.57) {
                 next_location = true;
-                l_rotate_flag = false;
-                r_rotate_flag = false;
+                rotate_L_flag = false;
+                rotate_R_flag = false;
                 move_forward = false;
                 stop_flag = true;
             } else {
-                l_rotate_flag = true;
-                r_rotate_flag = false;
+                rotate_L_flag = true;
+                rotate_R_flag = false;
                 move_forward = false;
                 stop_flag = false;
             }
@@ -124,7 +124,7 @@ void Perception::img_sensor_callback(
  * 
  * @param msg Odometry message.
  */
-void Perception::odom_callback_search(
+void Perception::odom_callback(
     const nav_msgs::msg::Odometry::SharedPtr) {
     // Convert the odom pose from quaternion to RPY angles
     tf2::Quaternion q(
@@ -135,7 +135,7 @@ void Perception::odom_callback_search(
     tf2::Matrix3x3 m(q);
     double r, p, y;
     m.getRPY(r, p, y);
-    present_yaw = y;
+    current_yaw = y;
 }
 
 /**
@@ -148,9 +148,9 @@ bool Perception::detect_book() {
     RCLCPP_INFO(this->get_logger(), "In Detect Bin");
     // Call the image call back to process the images from robot
     rclcpp::spin_some(percep_odom_node);
-    initial_yaw = present_yaw;
-    r_rotate_flag = false;
-    l_rotate_flag = false;
+    init_yaw = current_yaw;
+    rotate_R_flag = false;
+    rotate_L_flag = false;
     move_forward = false;
     stop_flag = false;
     next_location = false;
@@ -160,19 +160,19 @@ bool Perception::detect_book() {
 
     image_transport::ImageTransport it(img_node);
     sub = it.subscribe("pi_camera/image_raw", 1,
-        std::bind(&Perception::img_callback, this, _1));
+        std::bind(&Perception::img_sensor_callback, this, _1));
     // Start detecting the bin
     while (true) {
         rclcpp::spin_some(percep_odom_node);
         rclcpp::spin_some(img_node);
         if (stop_flag) {
-            move_to_bin();
+            go_to_shelf();
             break;
         } else if (next_location) {
-            move_to_bin();
+            go_to_shelf();
             return false;
         } else {
-            move_to_bin();
+            go_to_shelf();
             rclcpp::sleep_for(100ms);
         }
     }
@@ -188,10 +188,10 @@ bool Perception::detect_book() {
 bool Perception::go_to_book() {
     // Publish the velocities to the robot either to move forward or rotate.
     auto vel = geometry_msgs::msg::Twist();
-    if (r_rotate_flag) {
+    if (rotate_R_flag) {
         vel.angular.z = -0.1;
         vel.linear.x = 0;
-    } else if (l_rotate_flag) {
+    } else if (rotate_L_flag) {
         vel.angular.z = 0.1;
         vel.linear.x = 0;
     } else if (move_forward) {
@@ -201,6 +201,6 @@ bool Perception::go_to_book() {
         vel.linear.x = 0;
         vel.angular.z = 0;
     }
-    m_pub_vel->publish(vel);
+    vel_pub_->publish(vel);
     return true;  // or false based on the actual logic
 }
