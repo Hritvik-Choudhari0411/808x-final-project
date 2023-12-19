@@ -1,0 +1,6 @@
+[ 15%] Built target gtest_main
+[ 30%] Built target gtest
+[ 38%] [32mBuilding CXX object CMakeFiles/libratech.dir/src/manipulation.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/libratech.dir/src/navigation.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/libratech.dir/src/perception.cpp.o[0m
+[ 76%] Built target test_808x-final-project

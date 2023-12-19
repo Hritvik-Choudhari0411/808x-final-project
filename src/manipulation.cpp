@@ -33,7 +33,7 @@ Manipulation::Manipulation() : Node("manipulation") {
         "delete_entity");
     place_client = create_client<gazebo_msgs::srv::SpawnEntity>(
         "spawn_entity");
-    manip_node = rclcpp::Node::
+    manpltn_node = rclcpp::Node::
                     make_shared("book_manipulation_node");
 }
 
@@ -43,7 +43,7 @@ Manipulation::Manipulation() : Node("manipulation") {
  * @return bool.
  */
 bool Manipulation::pick_book() {
-while (!pick_client->wait_for_service(1s)) {
+while (!pick_client->wait_for_service(std::chrono_literals::1s)) {
         if (!rclcpp::ok()) {
           RCLCPP_ERROR(this->get_logger(),
               "Interruped while waiting for the server.");
@@ -59,7 +59,7 @@ while (!pick_client->wait_for_service(1s)) {
 
     auto result = pick_client->async_send_request(request);
     // Wait till the entity is deleted and the status is success
-    auto ret = rclcpp::spin_until_future_complete(manip_node,
+    auto ret = rclcpp::spin_until_future_complete(manpltn_node,
                                             result, 10s);
     if (ret == rclcpp::FutureReturnCode::SUCCESS) {
         return true;

@@ -1,0 +1,402 @@
+[0.000000] (-) TimerEvent: {}
+[0.000910] (808x-final-project) JobQueued: {'identifier': '808x-final-project', 'dependencies': OrderedDict()}
+[0.000965] (808x-final-project) JobStarted: {'identifier': '808x-final-project'}
+[0.058224] (808x-final-project) JobProgress: {'identifier': '808x-final-project', 'progress': 'cmake'}
+[0.059672] (808x-final-project) JobProgress: {'identifier': '808x-final-project', 'progress': 'build'}
+[0.059816] (808x-final-project) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project', '--', '-j16', '-l16'], 'cwd': '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hac'), ('GIO_MODULE_DIR', '/home/hac/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/snap/code/148/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hac/ros2_ws/install/turtlebot3_msgs/lib:/home/hac/ros2_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/hac/ros2_ws/install/dynamixel_sdk/lib:/home/hac/ros2_ws/install/beginner_tutorials/lib:/home/hac/ros2_ws/install/OpenCV/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/hac'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/148/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('GTK_IM_MODULE_FILE', '/home/hac/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/148/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/148/usr/share/code/code'), ('MANAGERPID', '2662'), ('SYSTEMD_EXEC_PID', '2884'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11612'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/hac/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'hac'), ('JOURNAL_STREAM', '8:19230'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'hac'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/hac/ros2_ws/src/808x-final-project/models/library/:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/hac/.local/bin:/home/hac/ros2_ws/install/OpenCV/bin:/opt/ros/humble/bin:/home/hac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hac:@/tmp/.ICE-unix/2865,unix/hac:/tmp/.ICE-unix/2865'), ('GTK_EXE_PREFIX', '/snap/code/148/usr'), ('INVOCATION_ID', 'e0b822c2fbb94c25bacb25a47a9762ab'), ('XDG_MENU_PREFIX', 'gnome-'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/148/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.PGYNG2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-76871dcc83.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/hac/snap/code/148/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/hac/ros2_ws/install/working_with_gazebo:/home/hac/ros2_ws/install/turtlebot3:/home/hac/ros2_ws/install/turtlebot3_teleop:/home/hac/ros2_ws/install/turtlebot3_simulations:/home/hac/ros2_ws/install/turtlebot3_bringup:/home/hac/ros2_ws/install/turtlebot3_node:/home/hac/ros2_ws/install/turtlebot3_navigation2:/home/hac/ros2_ws/install/turtlebot3_fake_node:/home/hac/ros2_ws/install/turtlebot3_example:/home/hac/ros2_ws/install/turtlebot3_msgs:/home/hac/ros2_ws/install/turtlebot3_gazebo:/home/hac/ros2_ws/install/turtlebot3_description:/home/hac/ros2_ws/install/turtlebot3_cartographer:/home/hac/ros2_ws/install/ros2_cpp_pubsub:/home/hac/ros2_ws/install/dynamixel_sdk_examples:/home/hac/ros2_ws/install/dynamixel_sdk_custom_interfaces:/home/hac/ros2_ws/install/dynamixel_sdk:/home/hac/ros2_ws/install/beginner_tutorials:/home/hac/ros2_ws/install/808x-final-project:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hac/ros2_ws/src/808x-final-project/build/808x-final-project'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/hac/snap/code/148/.local/share:/home/hac/snap/code/148:/snap/code/148/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hac/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/hac/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/hac/ros2_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/hac/ros2_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/hac/ros2_ws/install/beginner_tutorials/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hac/ros2_ws/install/working_with_gazebo:/home/hac/ros2_ws/install/turtlebot3:/home/hac/ros2_ws/install/turtlebot3_simulations:/home/hac/ros2_ws/install/turtlebot3_bringup:/home/hac/ros2_ws/install/turtlebot3_node:/home/hac/ros2_ws/install/turtlebot3_navigation2:/home/hac/ros2_ws/install/turtlebot3_fake_node:/home/hac/ros2_ws/install/turtlebot3_msgs:/home/hac/ros2_ws/install/turtlebot3_gazebo:/home/hac/ros2_ws/install/turtlebot3_description:/home/hac/ros2_ws/install/turtlebot3_cartographer:/home/hac/ros2_ws/install/ros2_cpp_pubsub:/home/hac/ros2_ws/install/dynamixel_sdk_examples:/home/hac/ros2_ws/install/dynamixel_sdk_custom_interfaces:/home/hac/ros2_ws/install/dynamixel_sdk:/home/hac/ros2_ws/install/beginner_tutorials:/home/hac/ros2_ws/install/OpenCV:/home/hac/ros2_ws/install/808x_final_scrap:/home/hac/ros2_ws/install/808x-final-project:/home/hac/ros2_ws/install/turtlebot3_teleop:/home/hac/ros2_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.099722] (-) TimerEvent: {}
+[0.134242] (808x-final-project) StdoutLine: {'line': b'[ 15%] Built target gtest_main\n'}
+[0.137102] (808x-final-project) StdoutLine: {'line': b'[ 30%] Built target gtest\n'}
+[0.154134] (808x-final-project) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/libratech.dir/src/manipulation.cpp.o\x1b[0m\n'}
+[0.155741] (808x-final-project) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/libratech.dir/src/navigation.cpp.o\x1b[0m\n'}
+[0.157100] (808x-final-project) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/libratech.dir/src/perception.cpp.o\x1b[0m\n'}
+[0.188496] (808x-final-project) StdoutLine: {'line': b'[ 76%] Built target test_808x-final-project\n'}
+[0.199903] (-) TimerEvent: {}
+[0.300329] (-) TimerEvent: {}
+[0.400863] (-) TimerEvent: {}
+[0.501369] (-) TimerEvent: {}
+[0.601815] (-) TimerEvent: {}
+[0.702352] (-) TimerEvent: {}
+[0.802881] (-) TimerEvent: {}
+[0.903437] (-) TimerEvent: {}
+[1.003974] (-) TimerEvent: {}
+[1.104562] (-) TimerEvent: {}
+[1.205108] (-) TimerEvent: {}
+[1.305589] (-) TimerEvent: {}
+[1.406115] (-) TimerEvent: {}
+[1.506612] (-) TimerEvent: {}
+[1.607079] (-) TimerEvent: {}
+[1.707556] (-) TimerEvent: {}
+[1.808012] (-) TimerEvent: {}
+[1.908484] (-) TimerEvent: {}
+[2.009075] (-) TimerEvent: {}
+[2.109655] (-) TimerEvent: {}
+[2.210206] (-) TimerEvent: {}
+[2.310756] (-) TimerEvent: {}
+[2.404899] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/manipulation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Manipulation::pick_book()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.405260] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/manipulation.cpp:46:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""s\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.405414] (808x-final-project) StderrLine: {'line': b'   46 | while (!pick_client->wait_for_service(\x1b[01;31m\x1b[K1s\x1b[m\x1b[K)) {\n'}
+[2.405546] (808x-final-project) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.407306] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/manipulation.cpp:63:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""s\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.407472] (808x-final-project) StderrLine: {'line': b'   63 |                                             result, \x1b[01;31m\x1b[K10s\x1b[m\x1b[K);\n'}
+[2.407570] (808x-final-project) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.410908] (-) TimerEvent: {}
+[2.511321] (-) TimerEvent: {}
+[2.611841] (-) TimerEvent: {}
+[2.712381] (-) TimerEvent: {}
+[2.812860] (-) TimerEvent: {}
+[2.913375] (-) TimerEvent: {}
+[3.013918] (-) TimerEvent: {}
+[3.019357] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/manipulation.cpp:69:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcontrol reaches end of non-void function [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type\x07-Wreturn-type\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.019677] (808x-final-project) StderrLine: {'line': b'   69 | \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[3.019825] (808x-final-project) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[3.051304] (808x-final-project) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/libratech.dir/build.make:90: CMakeFiles/libratech.dir/src/manipulation.cpp.o] Error 1\n'}
+[3.051610] (808x-final-project) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[3.093271] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Navigation::search_book()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.093544] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:85:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""ms\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.093608] (808x-final-project) StderrLine: {'line': b'   85 |     rclcpp::sleep_for(\x1b[01;31m\x1b[K1000ms\x1b[m\x1b[K);\n'}
+[3.093661] (808x-final-project) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.094654] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:90:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.094781] (808x-final-project) StderrLine: {'line': b'   90 |                         std::bind(&Navigation::odom_callback_search, this, \x1b[01;31m\x1b[K_1\x1b[m\x1b[K));\n'}
+[3.094860] (808x-final-project) StderrLine: {'line': b'      |                                                                            \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.094929] (808x-final-project) StderrLine: {'line': b'      |                                                                            \x1b[32m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\n'}
+[3.095004] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[3.095080] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[3.095471] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[3.095557] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.095607] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.095655] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.095701] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/navigation.hpp:14\x1b[m\x1b[K,\n'}
+[3.095748] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:12\x1b[m\x1b[K:\n'}
+[3.095793] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/functional:225:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.095852] (808x-final-project) StderrLine: {'line': b'  225 |     extern const _Placeholder<1> \x1b[01;36m\x1b[K_1\x1b[m\x1b[K;\n'}
+[3.095898] (808x-final-project) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.095943] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.095993] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.096039] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.096083] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.096128] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.096173] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.096222] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.096265] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.096309] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.096356] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.096400] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.096450] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/navigation.hpp:14\x1b[m\x1b[K,\n'}
+[3.096495] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:12\x1b[m\x1b[K:\n'}
+[3.096540] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:95:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<float>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.096753] (808x-final-project) StderrLine: {'line': b'   95 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"In Search Bins %d %f"\x1b[m\x1b[K,\n'}
+[3.096840] (808x-final-project) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.096912] (808x-final-project) StderrLine: {'line': b'   96 |                     \x1b[32m\x1b[Ksearch_pos.size()\x1b[m\x1b[K, pop_pos);\n'}
+[3.096980] (808x-final-project) StderrLine: {'line': b'      |                     \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~\x1b[m\x1b[K    \n'}
+[3.097047] (808x-final-project) StderrLine: {'line': b'      |                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[3.097113] (808x-final-project) StderrLine: {'line': b'      |                                    \x1b[32m\x1b[Kstd::vector<float>::size_type {aka long unsigned int}\x1b[m\x1b[K\n'}
+[3.097182] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:95:58:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[3.097248] (808x-final-project) StderrLine: {'line': b'   95 |         RCLCPP_INFO(this->get_logger(), "In Search Bins \x1b[01;36m\x1b[K%d\x1b[m\x1b[K %f",\n'}
+[3.097315] (808x-final-project) StderrLine: {'line': b'      |                                                         \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[3.097394] (808x-final-project) StderrLine: {'line': b'      |                                                          \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[3.097459] (808x-final-project) StderrLine: {'line': b'      |                                                          \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[3.097524] (808x-final-project) StderrLine: {'line': b'      |                                                         \x1b[32m\x1b[K%ld\x1b[m\x1b[K\n'}
+[3.097591] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:114:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""ms\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.097658] (808x-final-project) StderrLine: {'line': b'  114 |             rclcpp::sleep_for(\x1b[01;31m\x1b[K500ms\x1b[m\x1b[K);\n'}
+[3.097707] (808x-final-project) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.098413] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Navigation::go_to_shelf()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.098517] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:132:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.098588] (808x-final-project) StderrLine: {'line': b'  132 |                     std::bind(&Navigation::odom_callback_place, this, \x1b[01;31m\x1b[K_1\x1b[m\x1b[K));\n'}
+[3.098642] (808x-final-project) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.098691] (808x-final-project) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\n'}
+[3.098753] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[3.098805] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[3.098855] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[3.098905] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.098953] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.099002] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.099051] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/navigation.hpp:14\x1b[m\x1b[K,\n'}
+[3.099100] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:12\x1b[m\x1b[K:\n'}
+[3.099149] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/functional:225:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.099347] (808x-final-project) StderrLine: {'line': b'  225 |     extern const _Placeholder<1> \x1b[01;36m\x1b[K_1\x1b[m\x1b[K;\n'}
+[3.099418] (808x-final-project) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.099474] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:148:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""ms\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.099528] (808x-final-project) StderrLine: {'line': b'  148 |         rclcpp::sleep_for(\x1b[01;31m\x1b[K500ms\x1b[m\x1b[K);\n'}
+[3.099763] (808x-final-project) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.099835] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Navigation::resume_search()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.099901] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:164:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.099976] (808x-final-project) StderrLine: {'line': b'  164 |                     std::bind(&Navigation::odom_callback_search, this, \x1b[01;31m\x1b[K_1\x1b[m\x1b[K));\n'}
+[3.100054] (808x-final-project) StderrLine: {'line': b'      |                                                                        \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.100113] (808x-final-project) StderrLine: {'line': b'      |                                                                        \x1b[32m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\n'}
+[3.100164] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[3.100216] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[3.100268] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[3.100319] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.100372] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.100424] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.100487] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/navigation.hpp:14\x1b[m\x1b[K,\n'}
+[3.100590] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:12\x1b[m\x1b[K:\n'}
+[3.100642] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/functional:225:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.100691] (808x-final-project) StderrLine: {'line': b'  225 |     extern const _Placeholder<1> \x1b[01;36m\x1b[K_1\x1b[m\x1b[K;\n'}
+[3.100739] (808x-final-project) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.100786] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/navigation.cpp:180:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""ms\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.100837] (808x-final-project) StderrLine: {'line': b'  180 |         rclcpp::sleep_for(\x1b[01;31m\x1b[K500ms\x1b[m\x1b[K);\n'}
+[3.100885] (808x-final-project) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.114086] (-) TimerEvent: {}
+[3.176431] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KPerception::Perception()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.176818] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:34:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kodom_callback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KPerception\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.176882] (808x-final-project) StderrLine: {'line': b'   34 |         std::bind(&Perception::\x1b[01;31m\x1b[Kodom_callback\x1b[m\x1b[K, this, _1));\n'}
+[3.176945] (808x-final-project) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.177585] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:34:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.177699] (808x-final-project) StderrLine: {'line': b'   34 |         std::bind(&Perception::odom_callback, this, \x1b[01;31m\x1b[K_1\x1b[m\x1b[K));\n'}
+[3.177764] (808x-final-project) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.177820] (808x-final-project) StderrLine: {'line': b'      |                                                     \x1b[32m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\n'}
+[3.177871] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[3.177920] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[3.177968] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[3.178019] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.178068] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.178115] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.178162] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.178210] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.178265] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/functional:225:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.178315] (808x-final-project) StderrLine: {'line': b'  225 |     extern const _Placeholder<1> \x1b[01;36m\x1b[K_1\x1b[m\x1b[K;\n'}
+[3.178363] (808x-final-project) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.179598] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Perception::img_sensor_callback(const ConstSharedPtr&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.179733] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:47:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.179809] (808x-final-project) StderrLine: {'line': b'   47 |         cv::Mat image = cv_bridge::toCvShare(\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K, msg->encoding)->image;\n'}
+[3.179875] (808x-final-project) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.179939] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:47:46:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[3.180001] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7\x1b[m\x1b[K,\n'}
+[3.180064] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20\x1b[m\x1b[K,\n'}
+[3.180134] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[3.180181] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32\x1b[m\x1b[K,\n'}
+[3.180228] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42\x1b[m\x1b[K,\n'}
+[3.180275] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.180322] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.180370] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.180417] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.180472] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.180519] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.180567] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.180615] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.180661] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.180707] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.180754] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.180804] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbuiltin_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.180852] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.180897] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.180943] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7\x1b[m\x1b[K,\n'}
+[3.180989] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28\x1b[m\x1b[K,\n'}
+[3.181035] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30\x1b[m\x1b[K,\n'}
+[3.181080] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45\x1b[m\x1b[K,\n'}
+[3.181124] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[3.181168] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.181213] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.181258] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.181303] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.181346] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.181390] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.181435] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.181479] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.181525] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.181570] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.181616] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.181661] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.181720] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23\x1b[m\x1b[K,\n'}
+[3.181765] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7\x1b[m\x1b[K,\n'}
+[3.181810] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21\x1b[m\x1b[K,\n'}
+[3.181858] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[3.181912] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[3.182759] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[3.182845] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.182897] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.183040] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.183086] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.183130] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.183175] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.183218] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.183263] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.183307] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.183352] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstatistics_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.183402] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.183447] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.183492] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20\x1b[m\x1b[K,\n'}
+[3.183538] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose.hpp:7\x1b[m\x1b[K,\n'}
+[3.183583] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:18\x1b[m\x1b[K,\n'}
+[3.183628] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.183673] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.183719] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.183765] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.183809] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__struct.hpp:20\x1b[m\x1b[K,\n'}
+[3.183856] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/laser_scan.hpp:7\x1b[m\x1b[K,\n'}
+[3.183902] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:19\x1b[m\x1b[K,\n'}
+[3.183946] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.183991] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.184035] (808x-final-project) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.184078] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.184123] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/laser_scan.hpp:7\x1b[m\x1b[K,\n'}
+[3.184167] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:19\x1b[m\x1b[K,\n'}
+[3.184210] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.184254] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.184302] (808x-final-project) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.184346] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.184678] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7\x1b[m\x1b[K,\n'}
+[3.184747] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:25\x1b[m\x1b[K,\n'}
+[3.184797] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.184849] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.184897] (808x-final-project) StderrLine: {'line': b'   35 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.184942] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.184986] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.185032] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.185082] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.185128] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.185176] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.185223] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.185270] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.185316] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.185362] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.185409] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.185456] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.185504] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.185558] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.185606] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:118:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.185654] (808x-final-project) StderrLine: {'line': b'  118 |             "Could not convert from \'%s\' to \'bgr8\'.", \x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K->encoding.c_str());\n'}
+[3.185701] (808x-final-project) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.185748] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:118:55:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[3.185796] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7\x1b[m\x1b[K,\n'}
+[3.185840] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20\x1b[m\x1b[K,\n'}
+[3.185884] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[3.185927] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32\x1b[m\x1b[K,\n'}
+[3.185971] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42\x1b[m\x1b[K,\n'}
+[3.186014] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.186058] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.186101] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.186144] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.186187] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.186230] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.186273] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.186316] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.186359] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.186403] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.186447] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.186490] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbuiltin_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.186539] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.186584] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.186626] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7\x1b[m\x1b[K,\n'}
+[3.186669] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28\x1b[m\x1b[K,\n'}
+[3.186715] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30\x1b[m\x1b[K,\n'}
+[3.186757] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45\x1b[m\x1b[K,\n'}
+[3.186800] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[3.186842] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.186884] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.186926] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.186968] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.187010] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.187052] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.187094] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.187136] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.187178] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.187221] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.187264] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.187306] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.187349] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23\x1b[m\x1b[K,\n'}
+[3.187390] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7\x1b[m\x1b[K,\n'}
+[3.187433] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21\x1b[m\x1b[K,\n'}
+[3.187475] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[3.187517] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[3.187562] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[3.187604] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.187647] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.187689] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.187730] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.187773] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.187814] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.187857] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.187899] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.187941] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.187983] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstatistics_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.188026] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.188068] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.188111] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20\x1b[m\x1b[K,\n'}
+[3.188153] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose.hpp:7\x1b[m\x1b[K,\n'}
+[3.188195] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:18\x1b[m\x1b[K,\n'}
+[3.188237] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.188281] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:27:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.188325] (808x-final-project) StderrLine: {'line': b'   27 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.188367] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.188409] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__struct.hpp:20\x1b[m\x1b[K,\n'}
+[3.188462] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/laser_scan.hpp:7\x1b[m\x1b[K,\n'}
+[3.188505] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:19\x1b[m\x1b[K,\n'}
+[3.188548] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.188593] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.188635] (808x-final-project) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.188678] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.188720] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/laser_scan.hpp:7\x1b[m\x1b[K,\n'}
+[3.188763] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:19\x1b[m\x1b[K,\n'}
+[3.188807] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.188849] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.188892] (808x-final-project) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.188933] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.188975] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7\x1b[m\x1b[K,\n'}
+[3.189016] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:25\x1b[m\x1b[K,\n'}
+[3.189058] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.189100] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.189143] (808x-final-project) StderrLine: {'line': b'   35 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[3.189185] (808x-final-project) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.189226] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:\x1b[m\x1b[K At global scope:\n'}
+[3.189272] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:127:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid Perception::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.189318] (808x-final-project) StderrLine: {'line': b'  127 | void \x1b[01;31m\x1b[KPerception\x1b[m\x1b[K::odom_callback(\n'}
+[3.189363] (808x-final-project) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.189408] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:127:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid Perception::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.189455] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.189500] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:39:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Perception\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.189549] (808x-final-project) StderrLine: {'line': b'   39 | class \x1b[01;36m\x1b[KPerception\x1b[m\x1b[K : public rclcpp::Node {\n'}
+[3.189594] (808x-final-project) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.189640] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Perception::detect_book()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.189686] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:163:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.189733] (808x-final-project) StderrLine: {'line': b'  163 |         std::bind(&Perception::img_sensor_callback, this, \x1b[01;31m\x1b[K_1\x1b[m\x1b[K));\n'}
+[3.189779] (808x-final-project) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.189824] (808x-final-project) StderrLine: {'line': b'      |                                                           \x1b[32m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\n'}
+[3.189869] (808x-final-project) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[3.189914] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[3.189960] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[3.190004] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.190051] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.190095] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.190139] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/../include/perception.hpp:14\x1b[m\x1b[K,\n'}
+[3.190182] (808x-final-project) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:14\x1b[m\x1b[K:\n'}
+[3.190228] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/functional:225:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholders::_1\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.190272] (808x-final-project) StderrLine: {'line': b'  225 |     extern const _Placeholder<1> \x1b[01;36m\x1b[K_1\x1b[m\x1b[K;\n'}
+[3.190316] (808x-final-project) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.193559] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:169:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgo_to_shelf\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.193776] (808x-final-project) StderrLine: {'line': b'  169 |             \x1b[01;31m\x1b[Kgo_to_shelf\x1b[m\x1b[K();\n'}
+[3.193835] (808x-final-project) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.201659] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:172:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgo_to_shelf\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.201904] (808x-final-project) StderrLine: {'line': b'  172 |             \x1b[01;31m\x1b[Kgo_to_shelf\x1b[m\x1b[K();\n'}
+[3.202065] (808x-final-project) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.209456] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:175:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgo_to_shelf\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.209588] (808x-final-project) StderrLine: {'line': b'  175 |             \x1b[01;31m\x1b[Kgo_to_shelf\x1b[m\x1b[K();\n'}
+[3.209662] (808x-final-project) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.209728] (808x-final-project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hac/ros2_ws/src/808x-final-project/src/perception.cpp:176:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find numeric literal operator \xe2\x80\x98\x1b[01m\x1b[Koperator""ms\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.209793] (808x-final-project) StderrLine: {'line': b'  176 |             rclcpp::sleep_for(\x1b[01;31m\x1b[K100ms\x1b[m\x1b[K);\n'}
+[3.209857] (808x-final-project) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.214173] (-) TimerEvent: {}
+[3.314593] (-) TimerEvent: {}
+[3.415116] (-) TimerEvent: {}
+[3.515638] (-) TimerEvent: {}
+[3.616173] (-) TimerEvent: {}
+[3.716758] (-) TimerEvent: {}
+[3.817298] (-) TimerEvent: {}
+[3.917847] (-) TimerEvent: {}
+[4.018356] (-) TimerEvent: {}
+[4.118902] (-) TimerEvent: {}
+[4.219365] (-) TimerEvent: {}
+[4.319918] (-) TimerEvent: {}
+[4.420426] (-) TimerEvent: {}
+[4.468266] (808x-final-project) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/libratech.dir/build.make:104: CMakeFiles/libratech.dir/src/navigation.cpp.o] Error 1\n'}
+[4.520647] (-) TimerEvent: {}
+[4.597591] (808x-final-project) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/libratech.dir/build.make:118: CMakeFiles/libratech.dir/src/perception.cpp.o] Error 1\n'}
+[4.598025] (808x-final-project) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:184: CMakeFiles/libratech.dir/all] Error 2\n'}
+[4.598393] (808x-final-project) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.601589] (808x-final-project) CommandEnded: {'returncode': 2}
+[4.620748] (-) TimerEvent: {}
+[4.721284] (-) TimerEvent: {}
+[4.737796] (808x-final-project) JobEnded: {'identifier': '808x-final-project', 'rc': 2}
+[4.748518] (-) EventReactorShutdown: {}
