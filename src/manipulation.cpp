@@ -13,6 +13,10 @@
 #include <ios>
 #include <rclcpp/executors.hpp>
 #include <rclcpp/future_return_code.hpp>
+#include <chrono>
+
+using namespace std::chrono_literals;
+
 
 /**
  * @brief Manipulation class constructor.
@@ -43,7 +47,7 @@ Manipulation::Manipulation() : Node("manipulation") {
  * @return bool.
  */
 bool Manipulation::pick_book() {
-while (!pick_client->wait_for_service(std::chrono_literals::1s)) {
+while (!pick_client->wait_for_service(1s)) {
         if (!rclcpp::ok()) {
           RCLCPP_ERROR(this->get_logger(),
               "Interruped while waiting for the server.");
