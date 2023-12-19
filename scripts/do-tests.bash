@@ -10,6 +10,7 @@ set -xue -o pipefail
 rm -rf build/ install/
 set +u                          # stop checking undefined variable  
 source /opt/ros/humble/setup.bash
+rosdep install --from-paths src --ignore-src -r -y
 set -u                          # re-enable undefined variable check
 
 ##############################
