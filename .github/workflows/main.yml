@@ -67,6 +67,8 @@ jobs:
       # Run all unit test, integration test, and generate combined coverage report
       - name: Build, run unit test, and generate coverage report
         run: |
+          sudo chmod +x ./scripts/do-tests.bash
+          sudo chmod +x ./scripts/do-docs.bash
           ./scripts/do-tests.bash
           ./scripts/do-docs.bash
 
