@@ -94,7 +94,7 @@ bool Navigation::search_book() {
     while (search_pos.size() > 0) {
         float_t pop_pos = search_pos.back();
         search_pos.pop_back();
-        RCLCPP_INFO(this->get_logger(), "In Search Bins %d %f",
+        RCLCPP_INFO(this->get_logger(), "In Search Bins %ld %f",
                     search_pos.size(), pop_pos);
         check_odom = false;
         req_pos_y = pop_pos;
