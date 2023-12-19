@@ -15,7 +15,9 @@
 #include <rclcpp/logger.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/utilities.hpp>
+#include <chrono>
 
+using namespace std::chrono_literals;
 /**
  * @brief Navigation class constructor.
  * 
@@ -87,7 +89,7 @@ bool Navigation::search_book() {
     std::vector<float_t> search_pos = {6.0, 4.0, 2.0, 0.0};
     // Odom subscriber initialization
     auto odom_sub = nav_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
-                        std::bind(&Navigation::odom_callback_search, this, _1));
+                        std::bind(&Navigation::odom_callback_search, this, std::placeholders::_1));
     // Start the searching
     while (search_pos.size() > 0) {
         float_t pop_pos = search_pos.back();
@@ -129,7 +131,7 @@ bool Navigation::go_to_shelf() {
     // Initialize the flag
     check_odom = false;
     auto odom_sub = nav_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
-                    std::bind(&Navigation::odom_callback_place, this, _1));
+                    std::bind(&Navigation::odom_callback_place, this, std::placeholders::_1));
     geometry_msgs::msg::PoseStamped rpyGoal;
     // Set the location in the pose
     rpyGoal.header.frame_id = "map";
@@ -161,7 +163,7 @@ bool Navigation::resume_search() {
     // Set the flag
     check_odom = false;
     auto odom_sub = nav_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
-                    std::bind(&Navigation::odom_callback_search, this, _1));
+                    std::bind(&Navigation::odom_callback_search, this, std::placeholders::_1));
     geometry_msgs::msg::PoseStamped rpyGoal;
     // Set the resume search location
     rpyGoal.header.frame_id = "map";

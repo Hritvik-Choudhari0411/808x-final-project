@@ -19,6 +19,7 @@
 #include <rclcpp/logging.hpp>
 #include "../include/navigation.hpp"
 
+using namespace std::chrono_literals;
 
 /**
  * @brief Perception class constructor.
@@ -31,7 +32,7 @@ Perception::Perception() : Node("perception") {
     vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
     percep_odom_node = rclcpp::Node::make_shared("perception_odom_node");
     odom_sub = percep_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
-        std::bind(&Perception::odom_callback, this, _1));
+        std::bind(&Perception::odom_callback_search, this, std::placeholders::_1));
 }
 
 /**
@@ -40,7 +41,7 @@ Perception::Perception() : Node("perception") {
  * @param msg Image message.
  */
 void Perception::img_sensor_callback(
-    const sensor_msgs::msg::Image::ConstSharedPtr&) {
+    const sensor_msgs::msg::Image::ConstSharedPtr& msg) {
     try {
         // Convert the cv_bridge image to opencv Image.
         // cv::imshow("view", cv_bridge::toCvShare(msg, msg->encoding)->image);
@@ -124,8 +125,8 @@ void Perception::img_sensor_callback(
  * 
  * @param msg Odometry message.
  */
-void Perception::odom_callback(
-    const nav_msgs::msg::Odometry::SharedPtr) {
+void Perception::odom_callback_search(
+    const nav_msgs::msg::Odometry::SharedPtr msg) {
     // Convert the odom pose from quaternion to RPY angles
     tf2::Quaternion q(
         msg->pose.pose.orientation.x,
@@ -160,19 +161,19 @@ bool Perception::detect_book() {
 
     image_transport::ImageTransport it(img_node);
     sub = it.subscribe("pi_camera/image_raw", 1,
-        std::bind(&Perception::img_sensor_callback, this, _1));
+        std::bind(&Perception::img_sensor_callback, this, std::placeholders::_1));
     // Start detecting the bin
     while (true) {
         rclcpp::spin_some(percep_odom_node);
         rclcpp::spin_some(img_node);
         if (stop_flag) {
-            go_to_shelf();
+            go_to_book();
             break;
         } else if (next_location) {
-            go_to_shelf();
+            go_to_book();
             return false;
         } else {
-            go_to_shelf();
+            go_to_book();
             rclcpp::sleep_for(100ms);
         }
     }
