@@ -1,7 +1,7 @@
 # 808x-final-project
 
 ![CICD Workflow status](https://github.com/KshitijKarnawat/808x-final-project/actions/workflows/main.yml/badge.svg)
-[![codecov](https://codecov.io/gh/KshitijKarnawat/808x-final-project/branch/devel_phase1/graph/badge.svg)](https://codecov.io/gh/KshitijKarnawat/808x-final-project)
+[![codecov](https://codecov.io/gh/KshitijKarnawat/808x-final-project/branch/devel-phase2/graph/badge.svg)](https://codecov.io/gh/KshitijKarnawat/808x-final-project)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Problem Statement
