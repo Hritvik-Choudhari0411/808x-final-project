@@ -105,4 +105,4 @@ ros2 run 808x-final-project test_808x-final-project
 
 ### [Phase 1 Video](https://drive.google.com/drive/folders/1PNEZpoQxckXUty39gVZCyrosqI-xmcfu?usp=sharing)
 
-### [Phase 2 Video](https://drive.google.com/file/d/1XTcZjvW3J96W1UcCPcpznDSduecl6oOE/view?usp=sharing)
+### [Phase 2 Video](https://drive.google.com/file/d/1XTcZjvW3J96W1UcCPcpznDSduecl6oOE/view?usp=sharin
