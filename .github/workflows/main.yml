@@ -10,30 +10,50 @@
 #    https://docs.codecov.com/docs/status-badges
 #
 # version 1.1
+#
+# Docker method.  Use pre-build ROS 2 docker image.
+#
+# Important Note, Docker Hub has restricted the number of image pull
+# requests.
+#
+# See # https://docs.docker.com/docker-hub/download-rate-limit
+#
+# This means, if the you runs GitHub CI a lot, it will fail when you
+# run more than 100 times within 6 hours.  And then, you will have to
+# wait for a almost a day to be able to pull the docker image again.
+#
+# The alternative is to use GitHub Docker Registry or GitHub Pacakges
+# (ghcr.io) instead of Docker Hub.
+#
+# https://www.youtube.com/watch?v=U7TY_qUD8yA&ab_channel=AndrewSchmelyun
+# https://github.com/aschmelyun/github-actions-docker-phpunit
+# https://github.com/aschmelyun/github-actions-docker-compile
 ##############################################################################
 
 name: Run Unit Test and Upload Coverage Report
-
 on:
   # Triggered whenever push to main 
   push:
-    branches: [ "main" , "devel_phase1"]
+    branches: [ "main" , "devel-phase2" ]
 
   # Triggered whenever a pull request is created on main
   pull_request:
-    branches: [ "main" , "devel_phase1"]
-
+    branches: [ "main", "devel-phase2" ]
     types: [opened]
 
   # Allow manual trigger
   workflow_dispatch:
-
+    
 jobs:
   build-run-upload:
     # Create a container of the latest Ubuntu, other values could be
     # ubuntu-latest, ubuntu-22.04, etc.
-    runs-on: ubuntu-22.04
-    
+    runs-on: ubuntu-latest       # any ubuntu that has docker
+    defaults:
+      run:
+        shell: bash       # specify bash for use with docker container
+    container:
+      image: osrf/ros:humble-desktop # use ROS Humble from docker hub repository
     steps:
       # We want to use GitHub CI checkout version 3 to check out our branch
       - uses: actions/checkout@v3
@@ -41,65 +61,32 @@ jobs:
       # Install some system pacakges
       - name: Install build packages
         run: |
-          sudo apt-get update
-          sudo apt install -y doxygen lcov gcovr
-          sudo apt-get install -y software-properties-common
+          sudo apt update
+          sudo apt install -y doxygen lcov gcovr pandoc
 
-      # Install OpenCV
-      - name: Install opencv 
-        run: |   
-            sudo apt-get install libopencv-dev 
-            sudo apt-get install libopencv-contrib-dev
-
-      # Install ROS Humble
-      - name: Install ROS Humble
+      - name: Install ros packages
         run: |
-          sudo apt-get update && sudo apt-get install locales
-          sudo locale-gen en_US en_US.UTF-8
-          sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-          export LANG=en_US.UTF-8
-          sudo apt-get install software-properties-common
-          sudo add-apt-repository universe
-          sudo apt-get update && sudo apt-get install curl -y
-          sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-          sudo apt-get update
-          sudo apt-get upgrade
-          sudo apt-get install ros-humble-desktop -y
-          sudo apt-get install ros-dev-tools -y
-          source /opt/ros/humble/setup.bash
-      
-      # Install CV Bridge
-      - name: CV Bridge
+            sudo apt update
+            sudo apt install -y ros-humble-gazebo-ros
+          
+      # Run all unit test, integration test, and generate combined coverage report
+      - name: Build, run unit test, and generate coverage report
         run: |
-          sudo apt-get install -y ros-humble-cv-bridge
-          sudo apt-get install -y ros-humble-vision-opencv
-          source /opt/ros/humble/setup.bash
-      
-      - name: ROS Dep
-        run: |
-          sudo rosdep init
-          rosdep update
-          rosdep install --from-paths src -i -y --rosdistro humble
-      
-      # Install Gazebo and other ROS dependencies
-      - name: CMake Dependencies for the package
-        run: |
-          sudo apt-get install -y ros-humble-gazebo-ros-pkgs
-          sudo apt-get install -y ros-humble-rviz2 ros-humble-turtle-tf2-py ros-humble-tf2-ros ros-humble-tf2-tools ros-humble-turtlesim          
-
-      # Build, run unit test, and generate coverage report
-      - name: Configure CMake flags and build exectables
-        run: |
-          colcon build --packages-select 808x-final-project --cmake-args -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug
-          colcon build --packages-select 808x-final-project --cmake-clean-first --cmake-target test_coverage
-
+          sudo chmod +x ./scripts/do-tests.bash
+          sudo chmod +x ./scripts/do-docs.bash
+          ./scripts/do-tests.bash
 
       # Upload coverage result to CodeCov
-      - name: Upload coverage result to CodeCov
+      # - name: Upload coverage result to CodeCov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      #     files: ${{github.workspace}}/build/test_coverage_merged.info
+      #     fail_ci_if_error: true # optional (default = false)
+      #     verbose: true # optional (default = false)      
+          
+      - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: ${{github.workspace}}/build/test_coverage.info
-          fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false)      
+        env:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        

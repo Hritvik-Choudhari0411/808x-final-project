@@ -1,0 +1,1 @@
+cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order include/manipulation.hpp include/perception.hpp include/navigation.hpp include/simulation.hpp src/perception.cpp src/navigation.cpp src/manipulation.cpp src/simulation.cpp src/main.cpp test/test_perception.cpp test/test_navigation.cpp test/test_manipulation.cpp test/main.cpp > results/cpplint.txt

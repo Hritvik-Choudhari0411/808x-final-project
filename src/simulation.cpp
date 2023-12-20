@@ -4,12 +4,11 @@
  * @brief RobotSim class implementation (code stub)
  * @version 0.1
  * @date 2023-12-10
- * 
+ *
  * @copyright Copyright (c) 2023
- * 
+ *
  */
 
 #include "../include/simulation.hpp"
 
-Simulation::Simulation() {
-}
+Simulation::Simulation() {}
