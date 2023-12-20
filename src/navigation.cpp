@@ -94,7 +94,7 @@ bool Navigation::search_book() {
     while (search_pos.size() > 0) {
         float_t pop_pos = search_pos.back();
         search_pos.pop_back();
-        RCLCPP_INFO(this->get_logger(), "In Search Bins %ld %f",
+        RCLCPP_INFO(this->get_logger(), "In Search Books %ld %f",
                     search_pos.size(), pop_pos);
         check_odom = false;
         req_pos_y = pop_pos;
@@ -127,7 +127,7 @@ bool Navigation::search_book() {
  * @return false If the robot cannot reach the shelf.
  */
 bool Navigation::go_to_shelf() {
-    RCLCPP_INFO(this->get_logger(), "In Move to Disposal Zone");
+    RCLCPP_INFO(this->get_logger(), "In Move to Drop Zone");
     // Initialize the flag
     check_odom = false;
     auto odom_sub = nav_odom_node->create_subscription<nav_msgs::msg::Odometry>("odom", 10,

@@ -47,8 +47,8 @@ void Perception::img_sensor_callback(
         // cv::imshow("view", cv_bridge::toCvShare(msg, msg->encoding)->image);
         cv::Mat image = cv_bridge::toCvShare(msg, msg->encoding)->image;
         // HSV Masking to detect the trash bin.
-        int low_H = 20, low_S = 100, low_V = 100;
-        int high_H = 30, high_S = 255, high_V = 255;
+        int low_H = 40, low_S = 100, low_V = 100;
+        int high_H = 80, high_S = 255, high_V = 255;
         cv::Mat hsv, thr, bin;
         cv::cvtColor(image, hsv, CV_RGB2HSV);
         // Get the HSV Mask

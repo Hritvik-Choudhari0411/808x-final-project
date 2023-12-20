@@ -31,7 +31,7 @@
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Red</name> <!-- You can adjust the color or use a texture -->
+            <name>Gazebo/Green</name> <!-- You can adjust the color or use a texture -->
           </script>
         </material>
       </visual>
