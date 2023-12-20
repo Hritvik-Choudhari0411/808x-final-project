@@ -7,7 +7,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_block(i):
     model_path = os.path.join(get_package_share_directory('808x-final-project'), 'models')
-    x_pos = 0.0
+    x_pos = random.choice([0.0, 2.2, -2.0])
     y_pos = -1.8
 
     return Node(
@@ -24,9 +24,7 @@ def generate_block(i):
 
 def generate_launch_description():
 
-    book_cnt = 1
     blocks = []
-    for i in range(book_cnt):
-        blocks.append(generate_block(i))
+    blocks.append(generate_block(1))
 
     return LaunchDescription(blocks)
