@@ -1,4 +1,3 @@
- cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order  src/*.cpp include/*.hpp test/*.cpp
 Done processing include/manipulation.hpp
 Done processing include/navigation.hpp
 Done processing include/perception.hpp
